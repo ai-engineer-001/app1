@@ -1,0 +1,4 @@
+prompt_id,length_chars,length_words,complexity_score,sentiment_score,structure_type,patterns,top_keywords
+0,35,5,0.586,0.0,simple,,"analyze,market,trends,technology"
+1,43,7,0.559,0.2732,instruction,instruction,"create,marketing,strategy,products"
+2,43,6,0.59,0.0,instruction,instruction,"write,technical,documentation,rest,apis"
