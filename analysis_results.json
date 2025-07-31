@@ -1,0 +1,84 @@
+{
+  "total_prompts": 3,
+  "avg_length_chars": 40.3,
+  "avg_length_words": 6,
+  "avg_complexity": 0.578,
+  "sentiment_distribution": {
+    "positive": 1,
+    "neutral": 2,
+    "negative": 0
+  },
+  "common_patterns": [
+    [
+      "instruction",
+      2
+    ]
+  ],
+  "structure_types": {
+    "simple": 1,
+    "instruction": 2
+  },
+  "top_keywords": [
+    [
+      "analyze",
+      1
+    ],
+    [
+      "market",
+      1
+    ],
+    [
+      "trends",
+      1
+    ],
+    [
+      "technology",
+      1
+    ],
+    [
+      "create",
+      1
+    ],
+    [
+      "marketing",
+      1
+    ],
+    [
+      "strategy",
+      1
+    ],
+    [
+      "products",
+      1
+    ],
+    [
+      "write",
+      1
+    ],
+    [
+      "technical",
+      1
+    ],
+    [
+      "documentation",
+      1
+    ],
+    [
+      "rest",
+      1
+    ],
+    [
+      "apis",
+      1
+    ]
+  ],
+  "recommendations": [
+    "Prompts may be too brief - consider adding more context or examples",
+    "Add explicit reasoning instructions (e.g., 'think step by step') for complex tasks"
+  ],
+  "prompt_metrics": [
+    "PromptMetrics(length_chars=35, length_words=5, length_sentences=1, complexity_score=0.586, sentiment_score=0.0, readability_score=0, structure_type='simple', patterns=[], entities=['Analyze'], keywords=['analyze', 'market', 'trends', 'technology'])",
+    "PromptMetrics(length_chars=43, length_words=7, length_sentences=1, complexity_score=0.559, sentiment_score=0.2732, readability_score=0, structure_type='instruction', patterns=['instruction'], entities=['Create'], keywords=['create', 'marketing', 'strategy', 'products'])",
+    "PromptMetrics(length_chars=43, length_words=6, length_sentences=1, complexity_score=0.59, sentiment_score=0.0, readability_score=0, structure_type='instruction', patterns=['instruction'], entities=['REST', 'Write', 'APIs'], keywords=['write', 'technical', 'documentation', 'rest', 'apis'])"
+  ]
+}
