@@ -1,0 +1,58 @@
+{
+  "total_responses": 3,
+  "average_scores": "ResponseScore(relevance=np.float64(6.333333333333333), hallucination=np.float64(7.0), toxicity=np.float64(10.0), fluency=np.float64(8.3), coherence=np.float64(5.0), factuality=np.float64(7.333333333333333), completeness=np.float64(5.0), overall=np.float64(6.996666666666667))",
+  "score_distribution": {
+    "relevance": {
+      "excellent": 0,
+      "good": 2,
+      "fair": 1,
+      "poor": 0
+    },
+    "hallucination": {
+      "excellent": 1,
+      "good": 2,
+      "fair": 0,
+      "poor": 0
+    },
+    "toxicity": {
+      "excellent": 3,
+      "good": 0,
+      "fair": 0,
+      "poor": 0
+    },
+    "fluency": {
+      "excellent": 3,
+      "good": 0,
+      "fair": 0,
+      "poor": 0
+    },
+    "coherence": {
+      "excellent": 0,
+      "good": 0,
+      "fair": 3,
+      "poor": 0
+    },
+    "factuality": {
+      "excellent": 2,
+      "good": 1,
+      "fair": 0,
+      "poor": 0
+    },
+    "completeness": {
+      "excellent": 0,
+      "good": 0,
+      "fair": 3,
+      "poor": 0
+    }
+  },
+  "quality_summary": "Good overall quality (avg: 7.0/10). Strongest: toxicity (10.0), Weakest: coherence (5.0)",
+  "flagged_responses": [],
+  "recommendations": [
+    "Add instructions for comprehensive coverage of topics"
+  ],
+  "individual_metrics": [
+    "EvaluationMetrics(response_id='0', prompt='You are a helpful AI assistant. Analyze the market trends in renewable energy sector and provide a comprehensive report including statistics, key players, and future projections.', response='Renewable energy market is experiencing significant growth driven by climate policies, technological advancements, and decreasing costs. Key statistics show solar and wind energy capacity increasing by 15% annually. Major players include Tesla, Vestas, and First Solar. Future projections indicate continued expansion with renewables expected to reach 50% of global energy mix by 2030.', scores=ResponseScore(relevance=5.0, hallucination=6.0, toxicity=10.0, fluency=8.3, coherence=5.0, factuality=6.0, completeness=5.0, overall=6.47), details={'relevance': 'Low keyword overlap (0.25)', 'hallucination': 'More confident statements than uncertainty markers', 'toxicity': 'No toxic patterns detected', 'fluency': 'Appropriate length; Good vocabulary diversity', 'coherence': 'Heuristic evaluation not implemented for coherence', 'completeness': 'Heuristic evaluation not implemented for completeness', 'factuality': 'Some factual claims present (2) - verify accuracy'}, flags=[], recommendations=[])",
+    "EvaluationMetrics(response_id='1', prompt='Write a detailed technical documentation for implementing OAuth 2.0 authentication in a web application. Include code examples, security considerations, and best practices.', response=\"OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts. Implementation involves setting up authorization server, resource server, and client application. Security considerations include using HTTPS, proper token storage, and implementing CSRF protection. Code example: app.get('/auth', (req, res) => { // OAuth flow }). Best practices include using short-lived tokens and implementing proper scopes.\", scores=ResponseScore(relevance=7.0, hallucination=7.0, toxicity=10.0, fluency=8.3, coherence=5.0, factuality=8.0, completeness=5.0, overall=7.19), details={'relevance': 'Moderate keyword overlap (0.47)', 'hallucination': 'Balanced confidence and uncertainty', 'toxicity': 'No toxic patterns detected', 'fluency': 'Appropriate length; Good vocabulary diversity', 'coherence': 'Heuristic evaluation not implemented for coherence', 'completeness': 'Heuristic evaluation not implemented for completeness', 'factuality': 'No specific factual claims detected'}, flags=[], recommendations=[])",
+    "EvaluationMetrics(response_id='2', prompt='Explain quantum computing concepts to a business audience, focusing on practical applications and potential impact on different industries.', response='Quantum computing leverages quantum mechanical phenomena to process information in fundamentally different ways than classical computers. For businesses, key applications include optimization problems in logistics, financial modeling, drug discovery, and cryptography. Industries like pharmaceuticals could accelerate drug development, while financial services could improve risk modeling. However, practical quantum advantage is still emerging, with most applications 5-10 years away from commercial viability.', scores=ResponseScore(relevance=7.0, hallucination=8.0, toxicity=10.0, fluency=8.3, coherence=5.0, factuality=8.0, completeness=5.0, overall=7.33), details={'relevance': 'Moderate keyword overlap (0.38)', 'hallucination': 'Appropriate use of uncertainty markers', 'toxicity': 'No toxic patterns detected', 'fluency': 'Appropriate length; Good vocabulary diversity', 'coherence': 'Heuristic evaluation not implemented for coherence', 'completeness': 'Heuristic evaluation not implemented for completeness', 'factuality': 'No specific factual claims detected'}, flags=[], recommendations=[])"
+  ]
+}
