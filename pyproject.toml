@@ -1,0 +1,102 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptscope"
+version = "1.0.0"
+description = "Production-grade Python module for prompt analysis, comparison, response evaluation, and improvement"
+authors = [
+    {name = "PromptScope Team", email = "team@promptscope.ai"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "click>=8.1.0",
+    "rich>=13.5.0",
+    "pydantic>=2.4.0",
+    "openai>=1.12.0",
+    "anthropic>=0.18.0",
+    "google-generativeai>=0.4.0",
+    "cohere>=4.47.0",
+    "mistralai>=0.1.0",
+    "requests>=2.31.0",
+    "nltk>=3.8.1",
+    "spacy>=3.7.0",
+    "transformers>=4.36.0",
+    "sentence-transformers>=2.2.2",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+    "pandas>=2.1.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.17.0",
+    "jsonlines>=4.0.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.66.0",
+    "colorama>=0.4.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.7.0",
+    "ruff>=0.0.292",
+    "mypy>=1.5.0",
+]
+
+[project.scripts]
+promptscope = "promptscope.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/promptscope/promptscope"
+Documentation = "https://promptscope.readthedocs.io"
+Repository = "https://github.com/promptscope/promptscope"
+"Bug Tracker" = "https://github.com/promptscope/promptscope/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["promptscope*"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90", "I", "N", "UP", "YTT", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FURB", "LOG", "RUF"]
+ignore = ["E501", "S101", "S603", "S607"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
