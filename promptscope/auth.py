@@ -234,7 +234,7 @@ class AuthManager:
         Returns:
             AuthConfig object or None if authentication fails
         """
-        api_key = self.get_api_key(provider)
+        api_key = self.get_api_key(provider, interactive=False)
         if not api_key:
             return None
         
