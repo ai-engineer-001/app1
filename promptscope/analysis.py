@@ -28,10 +28,12 @@ from .apis import APIManager, LLMRequest
 # Download required NLTK data
 try:
     nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
     nltk.data.find('corpora/stopwords')
     nltk.data.find('vader_lexicon')
 except LookupError:
     nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
     nltk.download('stopwords', quiet=True)
     nltk.download('vader_lexicon', quiet=True)
 
