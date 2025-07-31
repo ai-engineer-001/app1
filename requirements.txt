@@ -39,3 +39,4 @@ python-dotenv>=1.0.0      # Environment variables
 pathlib>=1.0.1            # Path utilities
 tqdm>=4.66.0              # Progress bars
 colorama>=0.4.6           # Cross-platform colored terminal text
+keyring>=25.0.0           # Secure API key storage
