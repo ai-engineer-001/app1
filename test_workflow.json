@@ -1,0 +1,25 @@
+{
+  "name": "Content Creation Workflow",
+  "steps": {
+    "research": {
+      "prompt": "Research the given topic thoroughly and gather key facts, statistics, and recent developments.",
+      "dependencies": [],
+      "metadata": {"estimated_tokens": 200}
+    },
+    "outline": {
+      "prompt": "Create a detailed outline based on the research findings. Structure it with main points and supporting details.",
+      "dependencies": ["research"],
+      "metadata": {"estimated_tokens": 150}
+    },
+    "draft": {
+      "prompt": "Write a comprehensive first draft based on the outline. Include all key points with detailed explanations and examples.",
+      "dependencies": ["outline"],
+      "metadata": {"estimated_tokens": 500}
+    },
+    "review": {
+      "prompt": "Review and improve the draft for clarity, accuracy, and flow. Provide specific suggestions for enhancement.",
+      "dependencies": ["draft"],
+      "metadata": {"estimated_tokens": 300}
+    }
+  }
+}
