@@ -30,16 +30,27 @@ class PromptScope:
     evaluation, and improvement features.
     """
     
-    def __init__(self, model: str = "qwen2.5-vl-32b-instruct", provider: str = "openrouter"):
+    def __init__(self, model: str = "qwen2.5-vl-32b-instruct", provider: str = "openrouter", 
+                 api_manager: Optional[APIManager] = None):
         """
         Initialize PromptScope with specified model and provider.
         
         Args:
             model: Name of the LLM model to use
             provider: API provider (openrouter, openai, anthropic, etc.)
+            api_manager: Optional pre-configured API manager (for testing)
         """
-        self.auth = AuthManager()
-        self.api = APIManager(model=model, provider=provider, auth=self.auth)
+        if api_manager:
+            self.api = api_manager
+            self.auth = api_manager.auth
+        else:
+            self.auth = AuthManager()
+            # Only initialize API manager if we have credentials, otherwise leave as None
+            try:
+                self.api = APIManager(model=model, provider=provider, auth=self.auth)
+            except (EOFError, KeyboardInterrupt):
+                # In non-interactive mode, set API manager to None
+                self.api = None
         
         self.analyzer = PromptAnalyzer(self.api)
         self.comparator = PromptComparator(self.api)
