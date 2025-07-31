@@ -75,7 +75,7 @@ class AuthManager:
         self.config_dir.mkdir(exist_ok=True)
         self._config_cache: Optional[Dict[str, Any]] = None
     
-    def get_api_key(self, provider: str, interactive: bool = True) -> Optional[str]:
+    def get_api_key(self, provider: str, interactive: bool = False) -> Optional[str]:
         """
         Get API key for specified provider using multiple fallback methods.
         
