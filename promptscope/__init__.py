@@ -7,6 +7,8 @@ with Large Language Models (LLMs). It supports multiple LLM providers and
 includes both online and offline analysis capabilities.
 """
 
+from typing import Optional
+
 __version__ = "1.0.0"
 __author__ = "PromptScope Team"
 __email__ = "team@promptscope.ai"
